@@ -1,0 +1,31 @@
+{
+  "name": "typescript-article-example",
+  "version": "1.0.0",
+  "description": "Typescript Article Example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keeseung Lee (lee01494@gmail.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^8.0.47",
+    "@types/sinon": "^2.3.7",
+    "chai": "^4.1.2",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^4.3.1",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-tslint": "^8.1.2",
+    "gulp-typescript": "^3.2.3",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.0",
+    "sqlite3": "^3.1.13",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
+  },
+  "dependencies": {
+    "sequelize": "^4.22.0"
+  }
+}
