@@ -1,0 +1,18 @@
+{
+    "dev": {
+      "name": "article",
+      "dialect": "sqlite",
+      "storage": ":memory:",
+      "username": "root",
+      "password": "",
+      "logging": true
+    },
+    "test": {
+      "name": "article",
+      "dialect": "sqlite",
+      "storage": ":memory:",
+      "username": "root",
+      "password": "",
+      "logging": true
+    }
+  }
