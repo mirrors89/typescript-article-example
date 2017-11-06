@@ -20,7 +20,7 @@ describe("[Integration] 카테고리 모델을 테스트 한다.", () => {
   it("카테고리를 등록할 때 등록한 값이 리턴된다", (done: Function) => {
     //given
     const now = new Date();
-    let givenCategory = {name: "자유게시판", description: "자유롭게 글을 작성하세요.", cdate: now, udate: now}
+    let givenCategory = {name: "자유게시판", description: "자유롭게 글을 작성하세요.", cdate: now, udate: now};
 
     // //when
     const category = new Category(givenCategory);
