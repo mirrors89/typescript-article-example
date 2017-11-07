@@ -1,4 +1,5 @@
-import {Table, Column, Model, CreatedAt, UpdatedAt} from "sequelize-typescript";
+import {Table, Column, Model, ForeignKey, BelongsTo, CreatedAt, UpdatedAt} from "sequelize-typescript";
+import Category from "./category";
 
 @Table
 export default class Article extends Model<Article> {
@@ -13,4 +14,11 @@ export default class Article extends Model<Article> {
 
     @UpdatedAt
     udate: Date;
+
+    @ForeignKey(() => Category)
+    @Column
+    categoryId : number;
+
+    @BelongsTo(() => Category)
+    category: Category;
 }
