@@ -14,11 +14,11 @@ describe("[Integration] 카테고리 모델을 테스트 한다.", () => {
         cb(saveCategory);
       });
   };
-  const categoryDelete = (where: Object, cb: Function) => {
+  const categoryDestroy = (where: Object, cb: Function) => {
     Category.findOne(where).then((category: Category) => {
       category.destroy().then(() => {
         cb();
-      })
+      });
     });
   };
 
@@ -58,6 +58,17 @@ describe("[Integration] 카테고리 모델을 테스트 한다.", () => {
     });
   });
 
+  it("카테고리를 조회하면 카테고리 목록이 나온다.", (done: Function) => {
+    //given
+    //when
+    Category.findAll<Category>().then((categories: Category[]) => {
+      //then
+      expect(categories.length).to.be.eqls(1);
+      done();
+    });
+
+  });
+
   it("카테고리를 수정할 때 수정한 값이 리턴된다.", (done: Function) => {
     //given
     const now = moment.utc().format();
@@ -80,7 +91,7 @@ describe("[Integration] 카테고리 모델을 테스트 한다.", () => {
     let where = {name: "공지사항"};
 
     //when & then
-    categoryDelete(where, () => {
+    categoryDestroy(where, () => {
       Category.findOne({where: where}).then((findCategory: Category) => {
         expect(findCategory).to.be.eql(null);
         done();
