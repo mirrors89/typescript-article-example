@@ -11,7 +11,7 @@
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.44",
-    "@types/node": "^8.0.47",
+    "@types/node": "^8.0.51",
     "@types/sinon": "^2.3.7",
     "chai": "^4.1.2",
     "gulp": "^3.9.1",
@@ -20,8 +20,8 @@
     "gulp-tslint": "^8.1.2",
     "gulp-typescript": "^3.2.3",
     "mocha": "^4.0.1",
-    "moment": "^2.19.1",
-    "sinon": "^4.1.0",
+    "moment": "^2.19.2",
+    "sinon": "^4.1.2",
     "sqlite3": "^3.1.13",
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "reflect-metadata": "^0.1.10",
-    "sequelize": "^4.22.0",
+    "sequelize": "^4.22.6",
     "sequelize-typescript": "^0.5.0"
   }
 }

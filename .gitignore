@@ -2,3 +2,4 @@
 node_modules
 dist
 dist_test
+\.DS_Store

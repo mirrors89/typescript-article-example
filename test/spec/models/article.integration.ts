@@ -40,8 +40,8 @@ describe("[Integration] 아티클 모델을 테스트 한다.", () => {
       const now = moment.utc().format();
 
       let givenCategory = {name: "자유게시판", description: "자유롭게 글을 작성하세요.", cdate: now, udate: now};
-      let givenArticles = [{title: "아티클1", subject: "아티클 내용입니다.", cdate: now, udate: now},
-        {title: "아티클2", description: "이것도 아티클 내용입니다.", cdate: now, udate: now}];
+      let givenArticles = [{title: "아티클1", subject: "아티클 내용입니다.", author: "작성자2", cdate: now, udate: now},
+        {title: "아티클2", description: "이것도 아티클 내용입니다.", author: "작성자1", cdate: now, udate: now}];
 
       categorySave(givenCategory, (saveCategory: Category) => {
         Article.bulkCreate<Article>(givenArticles).then((articels: Article[]) => {
@@ -67,7 +67,7 @@ describe("[Integration] 아티클 모델을 테스트 한다.", () => {
     const now = moment.utc().format();
 
     let where = {name: "자유게시판"};
-    let givenArticle = {title: "글 제목", subject: "글내용", cdate: now, udate: now};
+    let givenArticle = {title: "글 제목", subject: "글내용", author: "작성자", cdate: now, udate: now};
 
     // when
     Category.findOne<Category>({where: where}).then((findCategory: Category) => {
@@ -106,7 +106,7 @@ describe("[Integration] 아티클 모델을 테스트 한다.", () => {
     // given
     const now = moment.utc().format();
     let where = {name: "자유게시판"};
-    let givenArticle = {title: "글 제목", subject: "글내용", cdate: now, udate: now};
+    let givenArticle = {title: "글 제목", subject: "글내용",  author: "작성자1", cdate: now, udate: now};
 
     // when
     Category.findOne<Category>({where: where}).then((findCategory: Category) => {

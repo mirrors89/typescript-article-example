@@ -9,6 +9,9 @@ export default class Article extends Model<Article> {
     @Column
     subject: string;
 
+    @Column
+    author: string;
+
     @CreatedAt
     cdate: Date;
 
