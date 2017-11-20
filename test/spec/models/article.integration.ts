@@ -7,9 +7,8 @@ import * as moment from "moment";
 describe("[Integration] 아티클 모델을 테스트 한다.", () => {
   moment.locale("ko");
 
-  const cleanUp = (cb: Function) => Article.destroy({where: {}, truncate: true}).then(() => {
-    Category.destroy({where: {}, truncate: true}).then(() => cb());
-  });
+  const cleanUp = (cb: Function) => Category.destroy({where: {}, truncate: true}).then(() => cb());
+  
 
   const categorySave = (given: Object, cb: Function) => {
     const category = new Category(given);

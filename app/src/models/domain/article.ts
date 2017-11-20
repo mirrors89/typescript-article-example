@@ -1,5 +1,6 @@
-import {Table, Column, Model, ForeignKey, BelongsTo, CreatedAt, UpdatedAt} from "sequelize-typescript";
+import {Table, Column, Model, ForeignKey, BelongsTo, HasMany, CreatedAt, UpdatedAt} from "sequelize-typescript";
 import Category from "./category";
+import Comment from "./comment";
 
 @Table
 export default class Article extends Model<Article> {
@@ -24,4 +25,8 @@ export default class Article extends Model<Article> {
 
     @BelongsTo(() => Category)
     category: Category;
+
+    @HasMany(() => Comment)
+    comments: Comment[];
+
 }
